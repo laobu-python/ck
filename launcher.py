@@ -1,5 +1,5 @@
 # launcher.py —— 新手启动器
-"""ck8 新手启动器：一个窗口三个大按钮，双击即可选择进入演示 / 教程 / 文档。
+"""ck0.9 新手启动器：一个窗口三个大按钮，双击即可选择进入演示 / 教程 / 文档。
 
 用法:
     python launcher.py              打开启动器界面
@@ -33,7 +33,7 @@ def _run_demo():
 
 def main():
     global app
-    app = MainWindow("ck8 新手启动器", 500, 360)
+    app = MainWindow("ck0.9 新手启动器", 500, 360)
     app.center_window()
 
     if '--tutorial' in sys.argv:
@@ -42,7 +42,7 @@ def main():
         app.run()
         return
 
-    app.label_ck("👋 欢迎使用 ck8 GUI 库", tsize=22)
+    app.label_ck("👋 欢迎使用 ck0.9 GUI 库", tsize=22)
 
     def _make_button(text, color, command):
         b = tk.Button(app.scrollable_frame, text=text, font=('Microsoft YaHei', 13, 'bold'),

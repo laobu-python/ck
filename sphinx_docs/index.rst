@@ -1,4 +1,4 @@
-ck8 GUI
+ck0.9 GUI
 ======
 
 .. toctree::

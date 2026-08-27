@@ -5,8 +5,8 @@ rem 1. 保存 .bat 文件所在目录（即你最终想 cd 到的位置）
 set "BAT_DIR=%~dp0"
 if "%BAT_DIR:~-1%"=="\" set "BAT_DIR=%BAT_DIR:~0,-1%"
 
-rem 2. 切换到 venv 所在目录并激活
-cd /d "D:\workspace\python\Python 库\ck7"
+rem 2. 切换到 venv 所在目录并激活（venv 就在本项目文件夹内，用脚本目录即可，不再写死路径）
+cd /d "%BAT_DIR%"
 call .venv311\Scripts\activate.bat
 
 rem 3. cd 回 .bat 文件所在的目录

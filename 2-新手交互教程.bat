@@ -1,6 +1,6 @@
 @echo off
 cd /d "%~dp0"
-echo Starting ck8 tutorial...
+echo Starting ck0.9 tutorial...
 python launcher.py --tutorial
 if errorlevel 1 (
   echo.

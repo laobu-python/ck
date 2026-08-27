@@ -1,6 +1,6 @@
 @echo off
 cd /d "%~dp0"
-echo Starting ck8 demo...
+echo Starting ck0.9 demo...
 python main.py
 if errorlevel 1 (
   echo.

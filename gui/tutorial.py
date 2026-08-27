@@ -1,7 +1,7 @@
 # gui/tutorial.py —— 新手交互式引导教程
 """新手交互式引导教程（TutorialWindow）
 
-以「一页一个组件」的方式，带纯新手逐个认识 ck8 的常用组件。
+以「一页一个组件」的方式，带纯新手逐个认识 ck0.9 的常用组件。
 每一页都包含一个可以真实操作的控件示例，并配一句人话解释，
 全程不需要写代码，只需要点击鼠标。
 """
@@ -13,7 +13,7 @@ from .widgets import WidgetMixin
 
 
 class _DemoCtx:
-    """轻量上下文：让教程页可以调用 ck8 的组件方法。
+    """轻量上下文：让教程页可以调用 ck0.9 的组件方法。
 
     教程页只需要 root 和 scrollable_frame；
     未定义的属性自动转发给宿主窗口（如 show_toast / ask_save_path）。
@@ -87,7 +87,7 @@ class TutorialWindow:
         return [
             {
                 'title': '1️⃣ 欢迎',
-                'desc': ('欢迎使用 ck8 GUI 库！\n\n'
+                'desc': ('欢迎使用 ck0.9 GUI 库！\n\n'
                          '这是一个用 Python 写的小型桌面程序库。\n'
                          '这个教程会「一页一个组件」带你认识常用控件，每一页都可以直接操作。\n\n'
                          '点击右下角的「下一步 →」开始吧！'),
@@ -139,7 +139,7 @@ class TutorialWindow:
             },
             {
                 'title': '9️⃣ 完成 🎉',
-                'desc': ('恭喜！你已经认识了 ck8 的主要组件。\n\n'
+                'desc': ('恭喜！你已经认识了 ck0.9 的主要组件。\n\n'
                          '接下来你可以：\n'
                          '• 关闭本窗口，运行完整演示（main.py）\n'
                          '• 打开「新手教程.md」学习怎么自己改代码\n'

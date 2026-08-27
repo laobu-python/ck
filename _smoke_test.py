@@ -132,7 +132,7 @@ check("searchable_list.set_items", set_items_test)
 import tempfile, os
 def export_csv_test():
     c, t = app.create_table(headers=["姓名", "分数"], rows=[("小明", 92), ("小红", 88)])
-    p = os.path.join(tempfile.gettempdir(), "ck8_export_test.csv")
+    p = os.path.join(tempfile.gettempdir(), "ck0.9_export_test.csv")
     res = app.export_table_csv(t, file_path=p)
     ok = res == p and os.path.exists(p)
     if os.path.exists(p):
@@ -143,7 +143,7 @@ def export_csv_test():
     return ok
 check("export_table_csv", export_csv_test)
 def save_csv_test():
-    p = os.path.join(tempfile.gettempdir(), "ck8_save_test.csv")
+    p = os.path.join(tempfile.gettempdir(), "ck0.9_save_test.csv")
     res = app.save_data_csv([(1, 2), (3, 4)], headers=["x", "y"], file_path=p)
     ok = res == p and os.path.exists(p)
     if os.path.exists(p):
@@ -151,7 +151,7 @@ def save_csv_test():
     return ok
 check("save_data_csv", save_csv_test)
 def save_json_test():
-    p = os.path.join(tempfile.gettempdir(), "ck8_save_test.json")
+    p = os.path.join(tempfile.gettempdir(), "ck0.9_save_test.json")
     res = app.save_data_json({"姓名": "张三", "分数": [1, 2]}, file_path=p)
     ok = res == p and os.path.exists(p)
     if os.path.exists(p):

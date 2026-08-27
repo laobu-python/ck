@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import ttk
 import datetime
 
-# 兼容两种运行方式：作为 ck8 包导入（相对路径）或直接从 ck8 目录运行（绝对路径）
+# 兼容两种运行方式：作为包导入（相对路径）或直接从项目根目录运行（绝对路径）
 try:
     from ..utils.helpers import write_csv, write_json
 except ImportError:
