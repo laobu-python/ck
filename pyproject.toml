@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ck0_09"
+version = "0.9"
+description = "基于 tkinter 的轻量级 GUI 组件库（组件/导出/新手引导）"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["tkinter", "gui", "widgets", "desktop"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[project.optional-dependencies]
+media = ["Pillow"]
+docs = ["mkdocs"]
+
+[tool.setuptools]
+# 可导入的包名为 ck0_09；其实际目录映射到项目根目录（文件夹名仍是 ck0.9）
+packages = ["ck0_09", "ck0_09.gui", "ck0_09.utils"]
+
+[tool.setuptools.package-dir]
+ck0_09 = "."
