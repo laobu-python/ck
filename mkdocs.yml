@@ -1,0 +1,7 @@
+site_name: ck8 GUI 文档
+nav:
+  - Home: index.md
+  - API: api.md
+
+site_dir: site
+docs_dir: docs
