@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ck1_0"
+version = "1.0"
+description = "面向新手的 Python GUI 组件库（Tk / PySide6 双后端，自带新手引导）"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["tkinter", "pyside6", "qt", "gui", "widgets", "desktop"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+]
+
+[project.optional-dependencies]
+# 图片 / GIF / APNG 相关能力需要 Pillow（不装也能用其它组件）
+media = ["Pillow"]
+# Qt 后端是**可选**依赖，永不成为必装项
+qt = ["PySide6>=6.9"]
+
+[tool.setuptools]
+# 可导入的包名是 `ck1_0`；它的实际目录映射到项目根
+# （文件夹名是 `ck1.0`，含小数点、不能直接 import，所以在这里做映射）。
+# `core/`、`renderer/`、`components/` 物理上位于项目根下的 `ck1_0/` 子目录，
+# 因此必须为它们单独给出 package-dir 映射，否则安装态下 `import ck1_0.core` 会失败。
+packages = [
+    "ck1_0",
+    "ck1_0.gui",
+    "ck1_0.utils",
+    "ck1_0.core",
+    "ck1_0.renderer",
+    "ck1_0.renderer.tk",
+    "ck1_0.renderer.qt",
+    "ck1_0.components",
+    "ck1_0.components.apng",
+]
+
+[tool.setuptools.package-dir]
+ck1_0 = "."
+"ck1_0.core" = "ck1_0/core"
+"ck1_0.renderer" = "ck1_0/renderer"
+"ck1_0.renderer.tk" = "ck1_0/renderer/tk"
+"ck1_0.renderer.qt" = "ck1_0/renderer/qt"
+"ck1_0.components" = "ck1_0/components"
+"ck1_0.components.apng" = "ck1_0/components/apng"

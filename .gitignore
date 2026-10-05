@@ -1,0 +1,24 @@
+# Visual Studio
+.vs/
+
+# Python 虚拟环境
+.venv311/
+..venv311/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# 构建产物 / 文档站点
+site/
+build/
+dist/
+*.egg-info/
+
+# 日志与临时文件
+*.log
+*.tmp
+
+# 编辑器
+.idea/
+.vscode/
